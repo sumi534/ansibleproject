@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  remote_user: root
+  gather_facts: ture
+  tasks:
+  - name: copy files
+    copy: 
+     src: /root/playbook/pb4.yaml
+    dest: /opt/
+  - name: display message
+    debug:
+      msg: files are copied
