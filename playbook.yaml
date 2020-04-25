@@ -10,4 +10,4 @@
     dest: /opt/
   - name: display message
     debug:
-      msg: files are copied
+     msg: files are copied
