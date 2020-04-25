@@ -9,8 +9,8 @@
      src: /root/playbook/pb4.yaml
      dest: /opt/
   - name: file create
-    file: name=sample mode=755 user=root state:present
-    
+    shell: "ls -al"
+    register: output   
   - name: display message
-    debug:
-     msg: files are copied
+    debug: var=output.stdout
+    
